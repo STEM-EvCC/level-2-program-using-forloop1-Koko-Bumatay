@@ -1,1 +1,2 @@
-# STEM103_Level3_1-ForLoop
+# STEM103_Level3_1-ForLoop: Koko Bumatay
+This program analyzes several sets of data regarding missions to space. One for loop counts the total missions, and another for loop counts how many were successful. The code prints both values to the console and then divides the successes by the missions and multiplies by 100 to find the percentage of missionss that succeeds. Another for loop creates a list consisting of the indexes at which items in the list of successful missions is true, and another for loop adds those indexes of the list of mission names to a list containing the names of the successful missions. It then prints out these names. 
