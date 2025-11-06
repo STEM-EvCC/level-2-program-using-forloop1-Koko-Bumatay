@@ -1,39 +1,27 @@
-#starter code
-mission_names = ['Apollo 11', 'Challenger', 'Curiosity Rover', 'Viking 1', 'Mars Pathfinder', 'Hubble Telescope', 'Apollo 13']
-mission_years = [1969, 1986, 2012, 1975, 1996, 1990, 1970]
-mission_success = [True, False, True, True, True, True, False]
-total_missions = 0
-successful_missions = 0
-pre_y2k_missions_index = []
-pre_y2k_missions_names = []
-i = -1
+#starter code 
+mission_names = ['Apollo 11', 'Challenger', 'Curiosity Rover', 'Viking 1', 'Mars Pathfinder', 'Hubble Telescope', 'Apollo 13'] 
+mission_years = [1969, 1986, 2012, 1975, 1996, 1990, 1970] 
+mission_success = [True, False, True, True, True, True, False] 
+successful_missions = 0 
 
-#analyze list data
-for x in mission_names:
-    total_missions += 1
-for x in mission_success:
-    if x:
-        successful_missions += 1
-    else: continue
-for x in mission_years:
-    i += 1
-    if x < 2000:
-        pre_y2k_missions_index.append(i)
-for x in pre_y2k_missions_index:
-    pre_y2k_missions_names.append(mission_names[x])
+#Count the total number of missions 
+print("Total number of missions: " + str(len(mission_names))) 
 
-#calculate success rate
-success_rate = successful_missions / total_missions
-success_rate *= 100
+#Count the number of successful missions 
+for x in mission_success: 
+    if x: 
+        successful_missions += 1 
+    else:  
+        continue 
+print("Number of successful missions: " + str(successful_missions)) 
 
-#print data
-print("Total number of missions: " + str(total_missions))
-print("Number of successful missions: " + str(successful_missions))
-print("Success rate: " + str(success_rate) + "%.")
-print("Missions launched before 2000:")
-print("- " + pre_y2k_missions_names[0])
-print("- " + pre_y2k_missions_names[1])
-print("- " + pre_y2k_missions_names[2])
-print("- " + pre_y2k_missions_names[3])
-print("- " + pre_y2k_missions_names[4])
-print("- " + pre_y2k_missions_names[5])
+#calculate success rate 
+success_rate = successful_missions / len(mission_names) * 100 
+sucess_rate = round(success_rate, 2)  
+print("Success rate: " + str(sucess_rate) + "%") 
+
+#Identify and list all missions launched before the year 2000 
+print("Missions launched before the year 2000: ") 
+for x in range(len(mission_success)): 
+    if mission_years[x] < 2000: 
+        print("- " + mission_names[x]) 
