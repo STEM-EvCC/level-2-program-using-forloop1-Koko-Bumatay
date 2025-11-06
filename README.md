@@ -1,1 +1,2 @@
-# STEM103_Level3_1-ForLoop
+# STEM103_Level3_1-ForLoop: Koko Bumatay
+This program analyzes several sets of data regarding missions to space. It first uses the length of the list of mission names to print out the total missions, then loops through the list of mission successes checking for success and prints a counter that increased by one every time an item was successful, then uses this data to print the success rate rounded to the second decimal as a percentage, and finally loops through a range equal to the length of the mission names list and prints every name whose index in the mission years list is less than 2000.
